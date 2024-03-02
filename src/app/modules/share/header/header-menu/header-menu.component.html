@@ -1,0 +1,28 @@
+<nav class="navbar navbar-expand-lg  navbar-dark bg-dark">
+	<div class="container">
+		<a class="navbar-brand" routerLink="/">St.Francis English Medium School</a>
+		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+			aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+			<span class="navbar-toggler-icon"></span>
+		</button>
+
+		<div class="collapse navbar-collapse" id="navbarSupportedContent">
+			<ul class="navbar-nav mr-auto" *ngFor="let menu of menuList">
+				<li class="nav-item dropdown">
+					<a class="nav-link" (click)="navigatePage(menu)" *ngIf="menu?.child.length == 0">{{menu.title}}</a>
+					<a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button"
+						aria-haspopup="true" aria-expanded="false" *ngIf="menu?.child.length">
+						<span>{{menu.title}}</span>
+					</a>
+					<div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink"
+						*ngIf="menu?.child.length">
+						<span *ngFor="let sub_menu of menu.child ">
+							<a class="dropdown-item" (click)="navigatePage(sub_menu)"> {{sub_menu.title}}</a>
+						</span>
+					</div>
+
+				</li>
+			</ul>
+		</div>
+	</div>
+</nav>

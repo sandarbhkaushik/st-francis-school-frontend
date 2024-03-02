@@ -1,0 +1,52 @@
+/* You can add global styles to this file, and also import other style files */
+body{
+  padding-top: 2rem;
+}
+.content-align{
+    text-align: justify !important;
+    white-space: pre-line;
+}
+.navbar-inverse {
+  background-color: #016991;
+  border-color: #016991;
+}
+.btn a{
+  color: #fff;
+}
+.navbar-inverse .navbar-brand {
+  color: #fff;
+}
+.dropdown-menu li a:hover{
+  background-color: #0282B5  !important;
+  color: #fff;
+}
+.dropdown-menu li:not(:last-child){
+ border-bottom: solid 0.1rem #DCDCDC;
+}
+.navbar-inverse .navbar-nav>li>a {
+  color: #fff;
+}
+.navbar-inverse .navbar-nav>li>a:hover {
+  color: #fff;
+  background-color: #0282B5;
+}
+.footer {
+  background-color: #01425C;
+  display: block;
+  clear: both;
+}
+
+.active-menu-item{
+  color: #fff;
+  background-color: #003E61;
+}
+.section-content{
+  min-height: 30rem;
+}
+.bg-dark {
+  background-color: #016991!important;
+}
+.footer-last-section{
+  background-color: #003254;
+  color: #fffffF;
+}

@@ -1,0 +1,66 @@
+<app-loader *ngIf="showloader"></app-loader>
+
+<div class="container section-content">
+  <h3 class="text-center">{{contentData?.title}}</h3>
+  <h4 class="text-center">{{contentData?.sub_title}}</h4>
+  <!-- <div *ngIf="contentData?.media.length == 1">
+    <img *ngIf="contentData?.media.show_img" [src]="(contentData?.media?.media_file).slice(30)" alt="" style=" width:25rem"
+      class="img-thumbnail  mx-auto d-block">
+      <h4 class="text-center">
+          <i class="fa fa-download" *ngIf="!contentData?.media.show_img" title="{{contentData?.title}}" (click)="downloadFile(contentData?.media?.media_file.slice(30))"></i>
+      </h4>
+  </div> -->
+
+  <div class="column has-text-centered">
+
+    <div>
+        <div class="row card-deck">
+          <div class="col-md-12">
+            <div class="card shadow p-3 mb-5 bg-white rounded"  data-toggle="tooltip"
+              data-placement="top" title="{{contentData?.title}}">
+              <img class="card-img-top img-fluid" [src]="(contentData?.media_file).slice(63)" alt="" (click)="open(contentData?.id)">
+              <!-- <h4 class="text-center">
+                  <i class="fa fa-download" *ngIf="!contentData.show_img" title="{{contentData.title}}" (click)="downloadFile(contentData.media_file.slice(30))"></i>
+              </h4> -->
+
+              <!-- <h3 class="card-title text-center">{{contentData?.title}}
+              </h3> -->
+              <div class="card-body text-justify" >
+                {{contentData?.content}}
+              </div>
+            </div>
+          </div>
+        </div>
+    </div>
+  </div>
+
+
+  <p class="lead content-align">{{contentData?.content}}</p>
+  <!-- <span class="row" *ngIf="contentData?.media.length > 1"> -->
+    <!-- <div class="column has-text-centered">
+
+      <div>
+          <div class="row card-deck">
+            <div class="col-md-12" *ngFor="let image of contentData?.media | keyvalue">
+              <div class="card shadow p-3 mb-5 bg-white rounded"  data-toggle="tooltip"
+                data-placement="top" title="{{image.value.title}}">
+                <img *ngIf="image.value.show_img" class="card-img-top img-fluid" [src]="(image.value.media_file).slice(30)" alt="image.value.title" (click)="open(image.key)">
+                <h4 class="text-center">
+                    <i class="fa fa-download" *ngIf="!image.value.show_img" title="{{image.value.title}}" (click)="downloadFile(image.value.media_file.slice(30))"></i>
+                </h4>
+
+                <h3 class="card-title text-center">{{image.value.title}}
+                </h3>
+                <div class="card-body text-justify" >
+                  {{image.value.content}}
+                </div>
+              </div>
+            </div>
+          </div>
+      </div>
+    </div> -->
+
+  <!-- </span> -->
+</div>
+
+

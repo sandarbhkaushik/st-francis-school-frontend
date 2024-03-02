@@ -1,0 +1,38 @@
+{
+    "/menu": {
+        "target": "http://localhost:8000",
+        "secure": false,
+        "logLevel": "debug",
+        "changeOrigin": true
+
+    },
+    "/api": {
+      "target": "http://stfrancisschoolkorba.ac.in/",
+      "secure": false,
+      "logLevel": "debug",
+      "changeOrigin": true
+
+  },
+
+    "/core": {
+        "target": "http://localhost:8000",
+        "secure": false,
+        "logLevel": "debug",
+        "changeOrigin": true
+
+    },
+    "/User": {
+        "target": "http://localhost:8000",
+        "secure": false,
+        "logLevel": "debug",
+        "changeOrigin": true
+
+    },
+    "/media":{
+      "target": "http://stfrancisschoolkorba.ac.in/",
+        "secure": false,
+        "logLevel": "debug",
+        "changeOrigin": true
+    }
+
+}

@@ -1,0 +1,19 @@
+<div class="container section-content">
+    <section class="our-webcoderskull padding-lg">
+        <div class="container">
+            <div class="row heading heading-icon">
+            </div>
+            <ul class="row">
+                <li class="col-12 col-md-6 col-lg-3" *ngFor="let val of facultyData;">
+                    <div class="cnt-block equal-hight" style="height: 349px;">
+                        <figure><img [src]="val.img" class="img-responsive" alt=""></figure>
+                        <h3>{{val.full_name | titlecase}}</h3>
+                        <h5>{{val?.education}}</h5>
+                        <h5>{{val?.job_title}}</h5>
+                        <h5>{{val?.contact_number}}</h5>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </section>
+</div>

@@ -1,0 +1,44 @@
+<!-- <p>landing-page works!</p> -->
+<!-- header -->
+<app-loader *ngIf="showloader"></app-loader>
+<div>
+  <div class="content container-fluid">
+    <!-- college Image -->
+    <div class="_mainImage container">
+      <img class="_image" src="assets/img/school-img.jpg" alt="school-img">
+    </div>
+    <!-- college Image ends -->
+
+    <!-- for(i = 0, i <= data.length, i++) -->
+    <!-- if(value == history || value == principalmessage || value == mission || value == vision) -->
+    <!-- if condition end -->
+    <!-- for loop ends -->
+
+    <!-- event -->
+    <marquee><a href="http://stfrancisschoolkorba.ac.in/#/staff-required5a61cbc5-2be6-4708-a9cf-170e4bc6e96f">Staff Requirement</a></marquee>
+    <div class="container">
+      <div class="">
+        <span>
+          <span class="">
+            <app-page-container *ngFor="let val of pageData | keyvalue" [data]="val" class="col-12">
+            </app-page-container>
+          </span>
+          <!-- <app-event [data]="val" *ngIf="val?.value.slug == 'history' || val?.value.slug == 'vision' || val?.value.slug == 'mission' || val?.value.slug == 'principalmessage' || val?.value.slug == 'headmistress'" class="content-align"></app-event> -->
+        </span>
+      </div>
+    </div>
+    <hr class="container">
+
+<!--Start: news events section -->
+  <div class="container">
+    <h5 *ngIf="eventDta.length">News</h5>
+    <div class="row">
+      <app-event *ngFor="let val of eventDta" [events]="val" class="col-md-4">
+      </app-event>
+    </div>
+  </div>
+<!--End: news events section -->
+
+
+  </div>
+</div>

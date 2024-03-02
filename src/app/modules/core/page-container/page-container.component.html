@@ -1,0 +1,27 @@
+<!-- <div class="card" >
+  <img class="card-img-top" [src]="pageData?.value.media[0]?.media_file" alt="Card image cap">
+  <div class="card-body">
+    <h5 class="card-title">{{pageData?.value.title}}</h5>
+      <p class="card-text text-justify">{{pageData.value.content |  slice:0:300}}<span *ngIf="pageData.value.content.length > 300">........</span></p>
+  </div>
+  <div class="card-footer">
+    <small class="text-muted pull-right"><span><a
+      routerLink="{{pageData.value.slug}}">Read More</a></span></small>
+  </div>
+</div> -->
+
+  <div class="card mb-3" >
+      <div class="row no-gutters">
+        <div class="col-md-4">
+          <img [src]="(pageData?.value.media[0]?.media_file).slice(30)" class="card-img img-card-css" alt="...">
+        </div>
+        <div class="col-md-8">
+          <div class="card-body">
+            <h5 class="card-title">{{pageData?.value.title}}</h5>
+            <p class="card-text text-justify ">{{pageData.value.content |  slice:0:300}}<span *ngIf="pageData.value.content.length > 300">...</span></p>
+            <p class="card-text pull-right btn btn-primary"><a
+              routerLink="{{pageData.value.slug}}">Read More</a></p>
+          </div>
+        </div>
+      </div>
+    </div>
